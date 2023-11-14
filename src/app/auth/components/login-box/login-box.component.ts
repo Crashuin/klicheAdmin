@@ -20,12 +20,8 @@ export class LoginBoxComponent {
 
   }
 
-  navegarRegister(){
-    this.router.navigate(['/register']);
-  }
-
   iniciarSesion(){
-    this.router.navigate(['/store']);
+    this.router.navigate(['/dashboard/home']);
   }
 
   ngOnInit(): void {
