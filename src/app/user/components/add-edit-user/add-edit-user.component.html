@@ -1,0 +1,62 @@
+<div mat-dialog-title>
+  <h1 class="text-center fs-3">Ingresar Usuario</h1>
+</div>
+<form [formGroup]="userForm" (ngSubmit)="onFormSubmit()">
+  <div mat-dialog-content class="content">
+
+    <div class="row">
+      <mat-form-field appearance="outline" class="my-1">
+        <mat-label>Nombre</mat-label>
+        <input matInput type="text" placeholder="Ej: Juan Torres" formControlName="nombre">
+        <mat-icon matSuffix>mail_outline</mat-icon>
+        <mat-error *ngIf="nombre.invalid || nombre.pristine">
+          El usuario debe tener un nombre
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class="row">
+      <mat-form-field appearance="outline" class="my-1">
+        <mat-label>Usuario</mat-label>
+        <input matInput type="text" placeholder="Ej: JuanTorres11" formControlName="usuario">
+        <mat-icon matSuffix>mail_outline</mat-icon>
+        <mat-error *ngIf="usuario.invalid || usuario.pristine">
+          Nombre de usuario obligatorio
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="my-1">
+        <mat-label>Perfil</mat-label>
+        <mat-select formControlName="perfil">
+          <mat-option *ngFor="let val of prioridadOpciones" [value]="val">{{val}}
+          </mat-option>
+        </mat-select>
+        <mat-icon matSuffix>priority_high</mat-icon>
+        <mat-error *ngIf="perfil.invalid || perfil.pristine">
+          El usuario debe tener un perfil
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class="row">
+      <mat-form-field appearance="outline" class="my-1">
+        <mat-label>Estado</mat-label>
+        <mat-select formControlName="estado">
+          <mat-option *ngFor="let val of estadoOpciones" [value]="val">{{val}}
+          </mat-option>
+        </mat-select>
+        <mat-icon matSuffix>priority_high</mat-icon>
+        <mat-error *ngIf="estado.invalid || estado.pristine">
+          El usuario debe tener un perfil
+        </mat-error>
+      </mat-form-field>
+
+    </div>
+
+    <div mat-dialog-actions align="center" class="my-3 mx-4">
+      <button mat-raised-button color="accent" type="button" [mat-dialog-close]="false">Cancelar</button>
+      <button mat-raised-button color="primary" [disabled]="userForm.invalid" type="submit">{{data? 'Editar' :
+        'Guardar'}}</button>
+    </div>
+  </div>
+</form>

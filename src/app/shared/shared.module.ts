@@ -14,11 +14,15 @@ import { MatListModule } from '@angular/material/list';
 
 //Router
 import { RouterModule } from '@angular/router';
+import { DashboardPageComponent } from './pages/dashboard-page/dashboard-page.component';
+import { Error404PageComponent } from './pages/error404-page/error404-page.component';
 
 @NgModule({
   declarations: [
     SidebarComponent,
-    ToolbarComponent
+    ToolbarComponent,
+    DashboardPageComponent,
+    Error404PageComponent
   ],
   imports: [
     CommonModule,

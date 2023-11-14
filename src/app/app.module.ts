@@ -3,9 +3,15 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+//Modules
+import { SharedModule } from './shared/shared.module';
 import { UserModule } from './user/user.module';
+import { ProductModule } from './product/product.module';
+import { CategoryModule } from './category/category.module';
+import { ClientModule } from './client/client.module';
+import { SaleModule } from './sale/sale.module';
 
 
 @NgModule({
@@ -18,7 +24,11 @@ import { UserModule } from './user/user.module';
     AppRoutingModule,
     SharedModule,
     BrowserAnimationsModule,
-    UserModule
+    UserModule,
+    ProductModule,
+    CategoryModule,
+    ClientModule,
+    SaleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

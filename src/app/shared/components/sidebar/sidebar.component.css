@@ -1,1 +1,11 @@
+.mat-sidenav {
+  border-radius: 15px;
+}
+
+.active {
+  opacity: 0.6;
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
+}
+
 

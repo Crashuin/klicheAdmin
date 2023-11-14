@@ -3,9 +3,7 @@ export interface User {
   nombre: string;
   usuario: string;
   perfil: string;
-  //foto ???
   estado: boolean;
   ultimo_login: Date;
   fecha_creacion: Date;
-
 }
