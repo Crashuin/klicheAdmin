@@ -50,16 +50,17 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'notfound',
-    component: Error404PageComponent
+    path: 'login',
+    component: LoginPageComponent
   },
   {
     path: '**',
     redirectTo: '/notfound'
   },
+
   {
-    path: 'login',
-    component: LoginPageComponent
+    path: 'notfound',
+    component: Error404PageComponent
   },
 
 ];

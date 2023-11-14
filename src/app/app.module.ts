@@ -12,6 +12,7 @@ import { ProductModule } from './product/product.module';
 import { CategoryModule } from './category/category.module';
 import { ClientModule } from './client/client.module';
 import { SaleModule } from './sale/sale.module';
+import { AuthModule } from './auth/auth.module';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { SaleModule } from './sale/sale.module';
     ProductModule,
     CategoryModule,
     ClientModule,
-    SaleModule
+    SaleModule,
+    AuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]
