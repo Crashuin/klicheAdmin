@@ -1,1 +1,62 @@
-<h1>Inicio</h1>
+<div class="container-fluid mt-5">
+  <h1 class="text-center fs-1">Modulos</h1>
+  <div class="row mx-2">
+    <div class="col-md-4">
+      <div class="card text-center h-100">
+        <div class="card-body">
+          <a routerLink="/dashboard/user" mat-raised-button color="primary" class="w-100 btn-custom">
+            <mat-icon class="icon-container">person</mat-icon> <div class="text-container">Usuarios</div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card text-center h-100">
+        <div class="card-body">
+          <a routerLink="/dashboard/category" mat-raised-button color="accent" class="w-100 btn-custom">
+            <mat-icon class="icon-container">dashboard</mat-icon> Categorías
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card text-center h-100">
+        <div class="card-body">
+          <a routerLink="/dashboard/client" mat-raised-button color="warn" class="w-100 btn-custom">
+            <mat-icon class="icon-container">people</mat-icon> Clientes
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-4 mx-2">
+    <div class="col-md-4">
+      <div class="card text-center h-100">
+        <div class="card-body">
+          <a routerLink="/dashboard/product" mat-raised-button color="warn" class="w-100 btn-custom">
+            <mat-icon class="icon-container">work</mat-icon> Productos
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card text-center h-100">
+        <div class="card-body">
+          <a routerLink="/dashboard/sale" mat-raised-button color="accent" class="w-100 btn-custom">
+            <mat-icon class="icon-container">attach_money</mat-icon> Ventas
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card text-center h-100">
+        <div class="card-body">
+          <a mat-raised-button routerLink="" color="primary" class="w-100 btn-custom">
+            <mat-icon class="icon-container">send</mat-icon> Pedidos
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,47 +1,40 @@
 <body>
-
   <div class="d-flex justify-content-center align-items-center vh-100">
-
     <mat-card-content>
       <div class="form-container" style="text-align: center;">
-
-          <a href="#"><img class="img-fluid mx-auto d-block m-5" width="300px" height="220px" src=".\assets\logo-blanco.png"></a>
-          <p class="title text-white">Inicio de sesión</p>
-          <form [formGroup]="login" class="mb-2">
-              <div class="row my-2">
-                  <mat-form-field appearance="outline" class="mat-form-field-required mt-2">
-                      <mat-label class="text-white">Email</mat-label>
-                      <input class="text-white" style="color: white;::placeholder { color: white; opacity: 1; }" type="email" matInput placeholder="Ingrese su email" formControlName="email">
-                      <mat-error *ngIf="email.errors?.['required']">
-                          El email es requerido
-                      </mat-error>
-                      <mat-error *ngIf="email.errors?.['email']">
-                          Ingrese un email valido
-                      </mat-error>
-                  </mat-form-field>
-              </div>
-
-              <div class="row my-2" >
-                  <mat-form-field appearance="outline" class="mat-form-field-required">
-                      <mat-label class="text-white">Contraseña</mat-label>
-                      <input class="text-white" type="password" matInput placeholder="Ingrese su contraseña" formControlName="password">
-                      <mat-error *ngIf="password.invalid || password.pristine">
-                          Ingrese la contraseña
-                      </mat-error>
-                  </mat-form-field>
-              </div>
-
-
-              <div class="mt-5">
-                  <button class="button" type="submit" [disabled]="login.invalid" (click)="iniciarSesion()">Iniciar sesión</button>
-              </div>
-          </form>
-
+        <a href="#"><img class="img-fluid mx-auto d-block m-5" width="300px" height="220px"
+            src=".\assets\logo-blanco.png"></a>
+        <p class="title text-white">Inicio de sesión</p>
+        <form [formGroup]="login" class="mb-2">
+          <div class="row my-2">
+            <mat-form-field appearance="fill" color="primary" class="mt-2">
+              <mat-label>Ingrese su email</mat-label>
+              <input type="email" matInput placeholder="Ej: Juan123@gmail.com" formControlName="email">
+              <mat-icon matSuffix>email</mat-icon>
+              <mat-error *ngIf="email.errors?.['required']">
+                El email es requerido
+              </mat-error>
+              <mat-error *ngIf="email.errors?.['email']">
+                Ingrese un email valido
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div class="row my-2">
+            <mat-form-field appearance="fill" color="primary" class="mat-form-field-required">
+              <mat-label>Ingrese su contraseña</mat-label>
+              <input type="password" matInput formControlName="password">
+              <mat-icon matSuffix>lock</mat-icon>
+              <mat-error *ngIf="password.invalid || password.pristine">
+                Ingrese la contraseña
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div class="mt-5">
+            <button class="button" type="submit" [disabled]="login.invalid" (click)="iniciarSesion()">Iniciar
+              sesión</button>
+          </div>
+        </form>
       </div>
-
-  </mat-card-content>
-
-</div>
+    </mat-card-content>
+  </div>
 </body>
-
-

@@ -54,13 +54,12 @@ const routes: Routes = [
     component: LoginPageComponent
   },
   {
-    path: '**',
-    redirectTo: '/notfound'
-  },
-
-  {
     path: 'notfound',
     component: Error404PageComponent
+  },
+  {
+    path: '**',
+    redirectTo: '/notfound'
   },
 
 ];

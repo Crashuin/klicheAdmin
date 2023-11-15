@@ -13,6 +13,7 @@ import { CategoryModule } from './category/category.module';
 import { ClientModule } from './client/client.module';
 import { SaleModule } from './sale/sale.module';
 import { AuthModule } from './auth/auth.module';
+import { HomeModule } from './home/home.module';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { AuthModule } from './auth/auth.module';
     AppRoutingModule,
     SharedModule,
     BrowserAnimationsModule,
+    HomeModule,
     UserModule,
     ProductModule,
     CategoryModule,

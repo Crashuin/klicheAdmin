@@ -89,11 +89,3 @@ button:hover::before {
 
 /* Angular material */
 
-/* Border */
-.mat-form-field-appearance-outline .mat-form-field-outline {
-  color: white;
-}
-/* Font color */
-input.mat-input-element {
-  color: white;
-}
